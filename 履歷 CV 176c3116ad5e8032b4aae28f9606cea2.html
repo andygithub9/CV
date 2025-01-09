@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>履歷 / CV</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="176c3116-ad5e-8032-b4aa-e28f9606cea2" class="page sans"><header><h1 class="page-title">履歷 / CV</h1><p class="page-description"></p></header><div class="page-body"><div><h1 id="176c3116-ad5e-810c-a7e4-ccffca4c0469" class="">履歷</h1><nav id="176c3116-ad5e-8105-ba82-c2417cc8e08f" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#176c3116-ad5e-810c-a7e4-ccffca4c0469">履歷</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-817a-9b26-f5da20e097fd">簡歷</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#176c3116-ad5e-8108-b617-e6e73a60ce61">TL;DR</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-81c5-8dfe-e936fe512401">基本資料</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-8199-ab4c-cc4cd341aecf">學歷/受訓</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-81ce-a3b4-d6ad9d3cd2fe">工作經歷</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-815e-b70f-da2cd2cb8f29">重要項目和成就</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#176c3116-ad5e-8181-b9dd-c88e55cfd41c">前端工程師 | TVBS公司 | 2022.06 - 現在</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-81c3-b8c8-f014cfe8cc29">專長技能</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-8138-a4e3-e816aa3a5cc1">證照</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-81f3-8383-c6b5ee44d3aa">早期專案經驗</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-8159-9ec3-ed51a3cdd453">個人專案</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#176c3116-ad5e-8166-842f-f093f383b174">CV</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-81e1-b917-c1bf220c8f17">Resume</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#176c3116-ad5e-8121-84ba-e7ef2245c502">TL;DR</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-812e-baf2-fd9e34621b9d">Personal Information</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-8152-a089-fc79edd49b8f">Education / Training</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-815c-9939-c00420001230">Work Experience</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-8123-94bd-ef515e6e6e89">Key Projects and Achievements at TVBS</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#176c3116-ad5e-8197-a52c-f8f8d649b82f">Front-end Engineer | TVBS | June 2022 - Present</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-8140-b1f8-f4427522a9a7">Skills</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-812d-99bf-cb5e1cef1d00">license</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-817c-bcb1-e5a4d76a289d">Early project experience</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#176c3116-ad5e-81e0-88bc-da4ef65809aa">Side Project</a></div></nav><h2 id="176c3116-ad5e-817a-9b26-f5da20e097fd" class="">簡歷</h2><p id="176c3116-ad5e-819c-8277-d5f3cd2d7697" class="">原本是唸財政稅務系，後來被製作網站所吸引，參加資策會前端就業班之後，到一間接案公司做前端工程師，主要接政府標案，也有接一些中小公司的案子，主要用 HTML, CSS, JS 切版。</p><p id="176c3116-ad5e-8148-9161-ce8fe617a4c2" class="">做了一年半後到 TVBS 當前端工程師，主要工作是把健康2.0的 PHP MVC 架構的畫面和顯示邏輯分離出來，採用 Next.js 改成前後端分離架構，並換上新的 UI ，期間還有參與的案子還有女人我最大的首頁、地球黃金線的汽車規格表、粉美賞、旅宿大賞、金 Car 獎，用到的技術有：React.js, Next.js, Tailwind CSS。</p><p id="176c3116-ad5e-81c3-9908-e28cde2add3e" class="">未來想做的工作：Backend Development, Frontend Development</p><h1 id="176c3116-ad5e-8108-b617-e6e73a60ce61" class="">TL;DR</h1><h2 id="176c3116-ad5e-81c5-8dfe-e936fe512401" class="">基本資料</h2><ul id="176c3116-ad5e-8149-bd08-f080ea1903aa" class="bulleted-list"><li style="list-style-type:disc">姓名: <strong>林循安 </strong>(<strong>Andy</strong>)  </li></ul><ul id="176c3116-ad5e-8153-b901-c74f4263a89a" class="bulleted-list"><li style="list-style-type:disc">生日: 1995/05</li></ul><ul id="176c3116-ad5e-8175-8967-c4a743f8b81d" class="bulleted-list"><li style="list-style-type:disc">手機: 0933-460-979</li></ul><ul id="176c3116-ad5e-810b-9ace-e55eaf730831" class="bulleted-list"><li style="list-style-type:disc">E-mail: z116123123x@gmail.com</li></ul><ul id="176c3116-ad5e-81ed-9ea1-e14a11b248b9" class="bulleted-list"><li style="list-style-type:disc">GitHub: <mark class="highlight-blue"><a href="https://github.com/andygithub9">https://github.com/andygithub9</a></mark><mark class="highlight-default"> 、</mark><mark class="highlight-blue"><a href="https://github.com/andygithub90">https://github.com/andygithub90</a></mark></li></ul><h2 id="176c3116-ad5e-8199-ab4c-cc4cd341aecf" class="">學歷/受訓</h2><ul id="176c3116-ad5e-811a-9090-f319a0288ebc" class="bulleted-list"><li style="list-style-type:disc">國立臺中科技大學 - 財政稅務系 2013/09 ~ 2017/06</li></ul><ul id="176c3116-ad5e-81e7-948b-eb6197205469" class="bulleted-list"><li style="list-style-type:disc">中壢資策會- Web/APP 前端設計工程師養成班 2019/12 ~ 2020/05 (約500小時)</li></ul><ul id="176c3116-ad5e-8126-942e-ccf79037bbf1" class="bulleted-list"><li style="list-style-type:disc">緯育TibaMe - 資安與雲端架構工程師養成班 2021/12 ~ 2022/04 (約500小時)</li></ul><h2 id="176c3116-ad5e-81ce-a3b4-d6ad9d3cd2fe" class="">工作經歷</h2><ul id="176c3116-ad5e-8115-ad7f-d049aa564ed5" class="bulleted-list"><li style="list-style-type:disc">祥順資訊有限公司 - 前端工程師 - 2020/06 - 2021/10<ul id="176c3116-ad5e-819b-8bb4-c6db15cbc42e" class="bulleted-list"><li style="list-style-type:circle">在祥順資訊有限公司職期間參與11個專案的前端開發與維護 ，請參考下面連結<figure id="31d61f3c-afa1-492d-905c-26b92ab3d278" class="link-to-page"><a href="https://www.notion.so/Early-project-experience-31d61f3cafa1492d905c26b92ab3d278?pvs=21">早期專案經驗/ Early project experience</a></figure></li></ul></li></ul><ul id="176c3116-ad5e-8114-84d1-d30fcf606b1a" class="bulleted-list"><li style="list-style-type:disc">聯利媒體股份有限公司<mark class="highlight-default">(TVBS)</mark> - 前端工程師 - 2022/06 - 現在<ul id="176c3116-ad5e-81f1-97ca-e91103fdfab0" class="bulleted-list"><li style="list-style-type:circle">女人我最大首頁： <a href="https://woman.tvbs.com.tw/">https://woman.tvbs.com.tw/</a></li></ul><ul id="176c3116-ad5e-8188-b9da-f30d91d24af8" class="bulleted-list"><li style="list-style-type:circle">地球黃金線汽車規格表： <a href="https://cars.tvbs.com.tw/spec/search/brand_name=&amp;car_body=&amp;price_min=&amp;price_max=&amp;fuel=&amp;per_page=12&amp;page=1">https://cars.tvbs.com.tw/spec/search/brand_name=&amp;car_body=&amp;price_min=&amp;price_max=&amp;fuel=&amp;per_page=12&amp;page=1</a></li></ul><ul id="176c3116-ad5e-813e-8bae-d646cdd15dd1" class="bulleted-list"><li style="list-style-type:circle">健康2.0：<a href="https://health.tvbs.com.tw/">https://health.tvbs.com.tw/</a></li></ul></li></ul><h2 id="176c3116-ad5e-815e-b70f-da2cd2cb8f29" class="">重要項目和成就</h2><h3 id="176c3116-ad5e-8181-b9dd-c88e55cfd41c" class="">前端工程師 | TVBS公司 | 2022.06 - 現在</h3><ul id="176c3116-ad5e-810f-8252-cff4fdc8db7b" class="bulleted-list"><li style="list-style-type:disc"><strong>項目背景</strong>：在 TVBS 面試時，我與主管討論了他們現有網站使用 React 的情況以及網站需要進行服務端渲染（Server Side Rendering, SSR）來提升 SEO 評分和曝光度的重要性。由於 TVBS 的營收主要依賴於曝光和廣告，我提出我熟悉 Next.js，可以幫助解決這個問題。</li></ul><ul id="176c3116-ad5e-81f0-8a92-d19a7f9ed4f8" class="bulleted-list"><li style="list-style-type:disc"><strong>技術選擇</strong>：選擇使用 React 是因為它的高效組件化結構、強大的生態系統和虛擬 DOM 技術，可以大幅提升開發效率和用戶體驗。同時，React 易於集成到現有項目中，並支持各種前端工具和庫。</li></ul><ul id="176c3116-ad5e-8165-8d97-f9ad67a415a4" class="bulleted-list"><li style="list-style-type:disc"><strong>解決方案</strong>：加入團隊後，我將原有的<mark class="highlight-blue"><a href="https://woman.tvbs.com.tw/">女人我最大網站首頁</a></mark>從 PHP MVC 架構遷移到前後端分離架構的過程。前端採用了 Next.js 框架，實現了服務端渲染（SSR），並結合增量靜態再生（ISR）技術，顯著提升了網站的 SEO 和加載速度。</li></ul><ul id="176c3116-ad5e-81b6-a551-c663466796cf" class="bulleted-list"><li style="list-style-type:disc"><strong>技術優勢</strong>：Next.js 作為 React 的框架，不僅支持服務端渲染（SSR），還提供了增量靜態再生（ISR）功能。這使得我們能夠靈活選擇渲染模式，既保證了熱門頁面的快速加載和高性能，又能應對頻繁更新的內容需求。此外，Next.js 的自動代碼拆分和優化加載路由等內建工具進一步提升了用戶體驗和網站性能。</li></ul><ul id="176c3116-ad5e-812e-8524-f4a24119fcc8" class="bulleted-list"><li style="list-style-type:disc"><strong>後續項目</strong>：在成功完成<mark class="highlight-blue"><a href="https://woman.tvbs.com.tw/">女人我最大網站首頁</a></mark>的重構並取得顯著成效後，公司認為我的工作表現優異，隨即指派我負責汽車網站的<mark class="highlight-blue"><a href="https://cars.tvbs.com.tw/spec/search/brand_name=&amp;car_body=&amp;price_min=&amp;price_max=&amp;fuel=&amp;per_page=12&amp;page=1">汽車搜尋頁和汽車規格資訊頁</a></mark>的開發。在這些頁面中，我繼續運用 Next.js 和 React，實現了高效的數據呈現和優化的用戶交互體驗，進一步提升了網站的性能和用戶滿意度。</li></ul><ul id="176c3116-ad5e-8100-a1ab-d7c88e51d75c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue"><a href="https://health.tvbs.com.tw/">健康網站</a></mark><strong>團隊</strong>：隨後，我被分配到<mark class="highlight-blue"><a href="https://health.tvbs.com.tw/">健康網站</a></mark>團隊，負責將 PHP MVC 的前端遷移到 Next.js。此過程中，我面臨了一個重大挑戰：Google 在 2024 年 3 月 12 日將 Interaction to Next Paint (INP) 作為 Core Web Vitals 的指標之一，導致我們網站在 Google 的評分下降。原本評為良好的八萬筆 URL 中，有四萬筆被 Google 判定為需要改善。</li></ul><ul id="176c3116-ad5e-81d3-8299-cf6c1e552e06" class="bulleted-list"><li style="list-style-type:disc"><strong>挑戰應對與成果</strong>：經過多次嘗試和優化，我在五月底成功將四萬筆中三萬七千筆 URL 的 Core Web Vitals 分數提高，並重新提交給 Google 驗證，最終被 Google 認定為良好的 URL。這些優化措施不僅提升了網站性能，也改善了用戶體驗和 SEO 排名。<p id="176c3116-ad5e-819b-bed0-e8ac1163660b" class="">
+</p></li></ul><ul id="176c3116-ad5e-8157-adf9-e52328fb9714" class="bulleted-list"><li style="list-style-type:disc"><strong>成果總結</strong>：<ul id="176c3116-ad5e-81e9-bc46-d5dab4d5b2e9" class="bulleted-list"><li style="list-style-type:circle">完成了從 PHP MVC 到前後端分離架構的成功遷移，顯著提升了網站的性能和可維護性。</li></ul><ul id="176c3116-ad5e-81c3-be7b-d797c2fbf440" class="bulleted-list"><li style="list-style-type:circle">實現了服務端渲染（SSR）和增量靜態再生（ISR），提高了網站的 SEO 評分和曝光度，為公司帶來了更多的流量和廣告收益。</li></ul><ul id="176c3116-ad5e-8190-b95a-c45da1c4ddfc" class="bulleted-list"><li style="list-style-type:circle">成功開發了汽車網站的汽車搜尋頁和汽車規格資訊頁，提升了網站的功能性和用戶體驗。</li></ul><ul id="176c3116-ad5e-81de-9e8b-c16ee47bbf33" class="bulleted-list"><li style="list-style-type:circle">在健康網站團隊中，通過優化措施成功提高了四萬筆中三萬七千筆 URL 的 Core Web Vitals 分數，改善了網站在 Google 的評分。<figure id="176c3116-ad5e-8165-81f2-e520ab660345" class="image"><a href="%E5%B1%A5%E6%AD%B7%20CV%20176c3116ad5e8032b4aae28f9606cea2/1719482026892.jpg"><img style="width:651.984375px" src="%E5%B1%A5%E6%AD%B7%20CV%20176c3116ad5e8032b4aae28f9606cea2/1719482026892.jpg"/></a></figure><figure id="176c3116-ad5e-81ff-9965-fe43f113edba" class="image"><a href="%E5%B1%A5%E6%AD%B7%20CV%20176c3116ad5e8032b4aae28f9606cea2/1719482024756.jpg"><img style="width:651.984375px" src="%E5%B1%A5%E6%AD%B7%20CV%20176c3116ad5e8032b4aae28f9606cea2/1719482024756.jpg"/></a></figure></li></ul></li></ul><h2 id="176c3116-ad5e-81c3-b8c8-f014cfe8cc29" class="">專長技能</h2><ul id="176c3116-ad5e-8122-b17d-fc9c4822ab1a" class="bulleted-list"><li style="list-style-type:disc">前端開發程式語言與技術：HTML、CSS、Javascript、Typescript。</li></ul><ul id="176c3116-ad5e-8142-83f4-ee96fa1c2f2d" class="bulleted-list"><li style="list-style-type:disc">網頁開發的 Framework 與 Library : Tailwind、React、Next.js。</li></ul><ul id="176c3116-ad5e-81aa-8c27-c5618d3c692b" class="bulleted-list"><li style="list-style-type:disc">網頁開發 IDE 及文字編輯器：Visual Studio Code。</li></ul><ul id="176c3116-ad5e-81b8-b33d-ceecf452d07d" class="bulleted-list"><li style="list-style-type:disc">版本控制工具：Git、Github。</li></ul><ul id="176c3116-ad5e-8150-8a0f-c685edd23b93" class="bulleted-list"><li style="list-style-type:disc">資料庫管理與運用：MySQL。</li></ul><ul id="176c3116-ad5e-81b5-9330-f432fef200f4" class="bulleted-list"><li style="list-style-type:disc">AWS Service：Route53、CloudFront、S3、EC2。</li></ul><ul id="176c3116-ad5e-81c2-979b-f9ff7f443c12" class="bulleted-list"><li style="list-style-type:disc">網站分析工具：Google Analytics、Google Tag Manager</li></ul><ul id="176c3116-ad5e-81f3-8c50-e483879f07cf" class="bulleted-list"><li style="list-style-type:disc">可獨立或與團隊成員搭配合作。</li></ul><h2 id="176c3116-ad5e-8138-a4e3-e816aa3a5cc1" class="">證照</h2><ul id="176c3116-ad5e-8179-b1d6-ed20b211becd" class="bulleted-list"><li style="list-style-type:disc">TOEIC - 680 分</li></ul><h2 id="176c3116-ad5e-81f3-8383-c6b5ee44d3aa" class="">早期專案經驗</h2><figure id="31d61f3c-afa1-492d-905c-26b92ab3d278" class="link-to-page"><a href="https://www.notion.so/Early-project-experience-31d61f3cafa1492d905c26b92ab3d278?pvs=21">早期專案經驗/ Early project experience</a></figure><h2 id="176c3116-ad5e-8159-9ec3-ed51a3cdd453" class="">個人專案</h2><ul id="176c3116-ad5e-8116-a315-d16fb9e5eb7a" class="bulleted-list"><li style="list-style-type:disc"><strong>Apple Redesign</strong><figure id="176c3116-ad5e-8169-9bae-d4b608f0edc0"><a href="https://apple-redesign-beta.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Apple Redesign</div></div><div class="bookmark-href"><img src="https://apple-redesign-beta.vercel.app/favicon.ico" class="icon bookmark-icon"/>https://apple-redesign-beta.vercel.app/</div></div><img src="https://apple-redesign-beta.vercel.app/_next/image?url=%2Fiphone.png&amp;w=3840&amp;q=75" class="bookmark-image"/></a></figure><p id="176c3116-ad5e-8169-b096-c664a8647849" class="">使用技術: Next.js, React.js, Typescript, Redux, Sanity.io, Stripe API, Tailwind CSS</p><p id="176c3116-ad5e-8170-bd1e-e3458045c6eb" class="">source code: <mark class="highlight-blue"><a href="https://github.com/andygithub9/apple-redesign">https://github.com/andygithub9/apple-redesign</a></mark></p></li></ul><ul id="176c3116-ad5e-81d2-a821-cab4ae8341ca" class="bulleted-list"><li style="list-style-type:disc"><strong>Realtime Private Chat</strong><figure id="176c3116-ad5e-81ba-a7c1-ef3283cea175"><a href="https://realtime-private-chat.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">React App</div><div class="bookmark-description">Web site created using create-react-app</div></div><div class="bookmark-href">https://realtime-private-chat.vercel.app/</div></div></a></figure><p id="176c3116-ad5e-812f-a042-c678a9b4fa10" class="">使用技術: React, Firebase</p><p id="176c3116-ad5e-81bb-bb88-fb404064b5f4" class="">source code: <mark class="highlight-blue"><a href="https://github.com/andygithub9/realtime-private-chat">https://github.com/andygithub9/realtime-private-chat</a></mark></p></li></ul><ul id="176c3116-ad5e-81e0-b8fb-d2cde752d4fa" class="bulleted-list"><li style="list-style-type:disc"><strong>Netflix Clone</strong><figure id="176c3116-ad5e-8156-a738-eb31572ff515"><a href="https://netflix-clone-yt-xi.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href"><img src="https://netflix-clone-yt-xi.vercel.app/favicon.ico" class="icon bookmark-icon"/>https://netflix-clone-yt-xi.vercel.app/</div></div></a></figure><p id="176c3116-ad5e-8148-a973-eccd5a0f0c66" class="">使用技術: Next.js, React.js, Typescript, Tailwind CSS, Firebase, Vercel</p><p id="176c3116-ad5e-812b-aad7-c30f040927c6" class="">source code: <mark class="highlight-blue"><a href="https://github.com/andygithub9/netflix-clone-yt">https://github.com/andygithub9/netflix-clone-yt</a></mark></p></li></ul><ul id="176c3116-ad5e-8163-a741-e232f87de4e3" class="bulleted-list"><li style="list-style-type:disc"><strong>Notion Clone</strong><figure id="176c3116-ad5e-812c-be62-fac70198a437"><a href="https://note-taking-app-pi-nine.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Jotion</div><div class="bookmark-description">The connected workspace where better, faster work happens.</div></div><div class="bookmark-href"><img src="https://note-taking-app-pi-nine.vercel.app/logo.svg" class="icon bookmark-icon"/>https://note-taking-app-pi-nine.vercel.app/</div></div></a></figure><p id="176c3116-ad5e-8105-bc28-d72962a4d9ac" class="">使用技術: Next.js, React.js, Typescript, Tailwind CSS, Convex</p><p id="176c3116-ad5e-811b-8a02-ebca17270f69" class="">source code: <mark class="highlight-blue"><a href="https://github.com/andygithub90/notion-clone">https://github.com/andygithub90/notion-clone</a></mark></p></li></ul><ul id="176c3116-ad5e-81d1-bd66-d33bfadc3258" class="bulleted-list"><li style="list-style-type:disc"><strong>Trello Clone</strong><figure id="176c3116-ad5e-8174-ae09-f99c3180074d"><a href="https://trello-tutorial-zeta.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Taskify</div><div class="bookmark-description">Collaborate, manage projects, and reach new productivity peaks</div></div><div class="bookmark-href"><img src="https://trello-tutorial-zeta.vercel.app/logo.svg" class="icon bookmark-icon"/>https://trello-tutorial-zeta.vercel.app/</div></div></a></figure><p id="176c3116-ad5e-812c-986f-f9d6b821b991" class="">使用技術: Next.js 14, Server Actions, React, Prisma, Stripe, Tailwind, MySQL</p><p id="176c3116-ad5e-811b-b7f5-e2014e62c420" class="">source code: <mark class="highlight-blue"><a href="https://github.com/andygithub9/trello-tutorial">https://github.com/andygithub9/trello-tutorial</a></mark></p></li></ul><p id="176c3116-ad5e-8109-9199-c355b214302b" class="">
+</p><hr id="176c3116-ad5e-812d-ad94-ebe65c29443b"/><h1 id="176c3116-ad5e-8166-842f-f093f383b174" class="">CV</h1><h2 id="176c3116-ad5e-81e1-b917-c1bf220c8f17" class="">Resume</h2><p id="176c3116-ad5e-81ba-8c53-f644fd95a7f0" class="">I initially majored in Finance and Taxation but was drawn to website development. After joining a front-end development training program at the Institute for Information Industry, I started working as a front-end developer at a freelance project company. My main tasks involved government contract projects and projects for small and medium-sized businesses, focusing on HTML, CSS, and JavaScript for front-end development.</p><p id="176c3116-ad5e-817c-b1da-c3f713bb7cae" class="">After a year and a half, I joined TVBS as a front-end engineer. My primary responsibility was to decouple the UI and display logic from the PHP MVC structure of the Health 2.0 project, transitioning it to a front-end and back-end separation architecture using Next.js with a new UI design. Other projects I contributed to included the homepage for &quot;Women Say,&quot; the car specification sheet for &quot;Earth Golden Line,&quot; and platforms like &quot;Beauty Awards,&quot; &quot;Lodging Awards,&quot; and &quot;Gold Car Awards.&quot; The technologies I utilized included React.js, Next.js, and Tailwind CSS.</p><p id="176c3116-ad5e-8189-bed6-fe4e3c088e12" class="">Future Career Aspirations: Backend Development, Frontend Development</p><h1 id="176c3116-ad5e-8121-84ba-e7ef2245c502" class="">TL;DR</h1><h2 id="176c3116-ad5e-812e-baf2-fd9e34621b9d" class="">Personal Information</h2><ul id="176c3116-ad5e-81b1-a8dd-f42244ad71eb" class="bulleted-list"><li style="list-style-type:disc">Name: <strong>Andy Lin </strong></li></ul><ul id="176c3116-ad5e-81bc-8fc5-d4c83299394d" class="bulleted-list"><li style="list-style-type:disc">Birthday: 1995/05</li></ul><ul id="176c3116-ad5e-8172-82ef-d7d084523d97" class="bulleted-list"><li style="list-style-type:disc">cellphone: 0933-460-979</li></ul><ul id="176c3116-ad5e-812e-85c7-eba3955350d9" class="bulleted-list"><li style="list-style-type:disc">E-mail: z116123123x@gmail.com</li></ul><ul id="176c3116-ad5e-813b-a18d-fb036d05ae90" class="bulleted-list"><li style="list-style-type:disc">GitHub: <mark class="highlight-blue"><a href="https://github.com/andygithub9">https://github.com/andygithub9</a></mark><mark class="highlight-default"><a href="https://github.com/andygithub9">, </a></mark><mark class="highlight-blue"><a href="https://github.com/andygithub90">https://github.com/andygithub90</a></mark></li></ul><h2 id="176c3116-ad5e-8152-a089-fc79edd49b8f" class="">Education / Training</h2><ul id="176c3116-ad5e-8195-9c16-cdce81045e75" class="bulleted-list"><li style="list-style-type:disc">National Taichung University of Science and Technology - Department of Public Finance and Taxation  2013/09 ~ 2017/06</li></ul><ul id="176c3116-ad5e-811b-ada6-e7ee556e561e" class="bulleted-list"><li style="list-style-type:disc">Institute for Information Industry - Web/APP Front-end design engineer training class  2019/12 ~ 2021/05 (about 500 hours)</li></ul><ul id="176c3116-ad5e-816b-8831-f8c428a35b70" class="bulleted-list"><li style="list-style-type:disc">Tiabem - Information Security and Cloud Architecture Engineer training class 2022/12 ~ 2021/05 (about 500 hours)</li></ul><h2 id="176c3116-ad5e-815c-9939-c00420001230" class="">Work Experience</h2><ul id="176c3116-ad5e-8161-b680-c439d8cf8e5c" class="bulleted-list"><li style="list-style-type:disc">Shine-Soon Information Co., Ltd. - Front-end engineer - 2020/06 - 2021/10<ul id="176c3116-ad5e-8178-97e6-e4c599c6dd8f" class="bulleted-list"><li style="list-style-type:circle">Participated in front-end development and maintenance of 11 projects, please refer to the link below<figure id="31d61f3c-afa1-492d-905c-26b92ab3d278" class="link-to-page"><a href="https://www.notion.so/Early-project-experience-31d61f3cafa1492d905c26b92ab3d278?pvs=21">早期專案經驗/ Early project experience</a></figure></li></ul></li></ul><ul id="176c3116-ad5e-81fb-adbf-e9406beecb93" class="bulleted-list"><li style="list-style-type:disc">TVBS - Front End Engineer - 2022/06 - Present<ul id="176c3116-ad5e-8111-97fb-c03ef5ee31cc" class="bulleted-list"><li style="list-style-type:circle">Woman TVBS Website, home page:  <a href="https://woman.tvbs.com.tw/">https://woman.tvbs.com.tw/</a></li></ul><ul id="176c3116-ad5e-816d-ab93-ffc371806c6f" class="bulleted-list"><li style="list-style-type:circle">Cars TVBS Website, spec view and search page:  <a href="https://cars.tvbs.com.tw/spec/search/brand_name=&amp;car_body=&amp;price_min=&amp;price_max=&amp;fuel=&amp;per_page=12&amp;page=1">https://cars.tvbs.com.tw/spec/search/brand_name=&amp;car_body=&amp;price_min=&amp;price_max=&amp;fuel=&amp;per_page=12&amp;page=1</a></li></ul><ul id="176c3116-ad5e-8173-93e5-cd3f92fd8d2d" class="bulleted-list"><li style="list-style-type:circle">Health TVBS site：<a href="https://health.tvbs.com.tw/">https://health.tvbs.com.tw/</a></li></ul></li></ul><h2 id="176c3116-ad5e-8123-94bd-ef515e6e6e89" class="">Key Projects and Achievements at TVBS</h2><h3 id="176c3116-ad5e-8197-a52c-f8f8d649b82f" class="">Front-end Engineer | TVBS | June 2022 - Present</h3><ul id="176c3116-ad5e-812d-a90f-ea11270a64c0" class="bulleted-list"><li style="list-style-type:disc"><strong>Project Background</strong>: During my interview with TVBS, I discussed with the supervisor their current use of React and the need for server-side rendering (SSR) to improve SEO scores and visibility. Since TVBS&#x27;s revenue heavily relies on exposure and advertisements, I proposed my expertise in Next.js to address this issue.</li></ul><ul id="176c3116-ad5e-8125-9c32-cd1b0179902a" class="bulleted-list"><li style="list-style-type:disc"><strong>Technology Choice</strong>: React was chosen for its efficient component-based architecture, strong ecosystem, and virtual DOM technology, which significantly enhance development efficiency and user experience. Additionally, React is easy to integrate into existing projects and supports various front-end tools and libraries.</li></ul><ul id="176c3116-ad5e-8141-961e-efb16d52e58f" class="bulleted-list"><li style="list-style-type:disc"><strong>Solution</strong>: After joining the team, I migrate of the <mark class="highlight-blue"><a href="https://woman.tvbs.com.tw/">homepage of the Woman TVBS website</a></mark> from a PHP MVC architecture to a decoupled front-end and back-end architecture. The front-end was implemented using the Next.js framework, achieving server-side rendering (SSR) and combining incremental static regeneration (ISR) techniques, which significantly improved the website&#x27;s SEO and loading speed.</li></ul><ul id="176c3116-ad5e-819d-8268-ea4ffb6689b0" class="bulleted-list"><li style="list-style-type:disc"><strong>Technical Advantages</strong>: As a React framework, Next.js not only supports server-side rendering (SSR) but also provides incremental static regeneration (ISR) functionality. This allowed us to flexibly choose rendering modes, ensuring fast loading and high performance for popular pages while addressing the need for frequently updated content. Additionally, Next.js’s built-in tools, such as automatic code splitting and optimized route loading, further enhanced user experience and website performance.</li></ul><ul id="176c3116-ad5e-81a3-97f0-c5dac4e2bc01" class="bulleted-list"><li style="list-style-type:disc"><strong>Subsequent Projects</strong>: Following the successful overhaul of the <mark class="highlight-blue"><a href="https://woman.tvbs.com.tw/">Woman TVBS homepage</a></mark> and achieving significant results, the company recognized my outstanding performance and assigned me to develop the <mark class="highlight-blue"><a href="https://cars.tvbs.com.tw/spec/search/brand_name=&amp;car_body=&amp;price_min=&amp;price_max=&amp;fuel=&amp;per_page=12&amp;page=1">Cars TVBS search page and Cars TVBS specification information page</a></mark><mark class="highlight-default"> </mark>for the automotive website. In these projects, I continued to utilize Next.js and React, achieving efficient data presentation and optimized user interactions, further enhancing website performance and user satisfaction.</li></ul><ul id="176c3116-ad5e-8133-b234-f7ac10c76a47" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue"><strong><a href="https://health.tvbs.com.tw/">Health TVBS Website</a></strong></mark><strong> Team</strong>: Later, I was assigned to the <mark class="highlight-blue"><a href="https://health.tvbs.com.tw/">Health TVBS website</a></mark> team to migrate the front-end from PHP MVC to Next.js. During this process, I faced a major challenge: On March 12, 2024, Google made Interaction to Next Paint (INP) a Core Web Vitals metric, causing our website&#x27;s scores to drop. Out of the originally well-rated 80,000 URLs, 40,000 were deemed in need of improvement by Google.</li></ul><ul id="176c3116-ad5e-8181-8ae7-e00256b58238" class="bulleted-list"><li style="list-style-type:disc"><strong>Challenge Response and Results</strong>: Through various attempts and optimizations, by the end of May, I successfully improved the Core Web Vitals scores of 37,000 out of the 40,000 URLs. After resubmitting them to Google for validation, they were recognized as good URLs. These optimization measures not only enhanced website performance but also improved user experience and SEO rankings.<figure id="176c3116-ad5e-8119-895b-fe435f4f8a34" class="image"><a href="%E5%B1%A5%E6%AD%B7%20CV%20176c3116ad5e8032b4aae28f9606cea2/1719482026892.jpg"><img style="width:679.9921875px" src="%E5%B1%A5%E6%AD%B7%20CV%20176c3116ad5e8032b4aae28f9606cea2/1719482026892.jpg"/></a></figure><figure id="176c3116-ad5e-81c5-8dc9-cb68ac8a5cee" class="image"><a href="%E5%B1%A5%E6%AD%B7%20CV%20176c3116ad5e8032b4aae28f9606cea2/1719482024756.jpg"><img style="width:679.9921875px" src="%E5%B1%A5%E6%AD%B7%20CV%20176c3116ad5e8032b4aae28f9606cea2/1719482024756.jpg"/></a></figure></li></ul><ul id="176c3116-ad5e-81bd-933e-f526409bcc77" class="bulleted-list"><li style="list-style-type:disc"><strong>Summary of Achievements</strong>:<ul id="176c3116-ad5e-81cc-9845-cd2fbcea8ee4" class="bulleted-list"><li style="list-style-type:circle">Successfully migrated from a PHP MVC to a decoupled front-end and back-end architecture, significantly improving website performance and maintainability.</li></ul><ul id="176c3116-ad5e-8151-be08-d632c3d0991b" class="bulleted-list"><li style="list-style-type:circle">Implemented server-side rendering (SSR) and incremental static regeneration (ISR), increasing the website&#x27;s SEO scores and visibility, resulting in more traffic and advertisement revenue for the company.</li></ul><ul id="176c3116-ad5e-81fa-a851-de06b0b4c811" class="bulleted-list"><li style="list-style-type:circle">Developed the  <mark class="highlight-blue"><a href="https://cars.tvbs.com.tw/spec/search/brand_name=&amp;car_body=&amp;price_min=&amp;price_max=&amp;fuel=&amp;per_page=12&amp;page=1">Cars TVBS search page and Cars TVBS specification information page</a></mark> for the automotive website, enhancing the functionality and user experience of the site.</li></ul><ul id="176c3116-ad5e-819c-923d-debfadb00b46" class="bulleted-list"><li style="list-style-type:circle">In the <mark class="highlight-blue"><strong><a href="https://health.tvbs.com.tw/">Health TVBS Website</a></strong></mark> team, successfully improved the Core Web Vitals scores of 37,000 out of 40,000 URLs through optimization measures, improving the website&#x27;s rating on Google.</li></ul></li></ul><h2 id="176c3116-ad5e-8140-b1f8-f4427522a9a7" class="">Skills</h2><ul id="176c3116-ad5e-81eb-984a-d12bd25c13bb" class="bulleted-list"><li style="list-style-type:disc">Front-end development programming languages: HTML, CSS, Javascript, Typescript。</li></ul><ul id="176c3116-ad5e-8137-913f-f8320c9eecce" class="bulleted-list"><li style="list-style-type:disc">Frontramework and Library for front-end web development: Tailwind, React, Next.js。</li></ul><ul id="176c3116-ad5e-8144-8c93-e8ef0ca54460" class="bulleted-list"><li style="list-style-type:disc">Web development IDEs and text editors: Visual Studio Code。</li></ul><ul id="176c3116-ad5e-81c7-85ce-c79afa95b44d" class="bulleted-list"><li style="list-style-type:disc">Version control tools: Git, Github。</li></ul><ul id="176c3116-ad5e-81d1-9014-d98a5c776bfe" class="bulleted-list"><li style="list-style-type:disc">Database management and use: MySQL。</li></ul><ul id="176c3116-ad5e-817b-99bb-f473f1ddc19e" class="bulleted-list"><li style="list-style-type:disc">AWS Service: Route53, CloudFront, S3, EC2。</li></ul><ul id="176c3116-ad5e-8185-ad09-e1437d862a1c" class="bulleted-list"><li style="list-style-type:disc">Website analysis tools: Google Analytics, Google Tag Manager</li></ul><ul id="176c3116-ad5e-8145-8700-e9a329a27335" class="bulleted-list"><li style="list-style-type:disc">Can work independently or with team members。</li></ul><h2 id="176c3116-ad5e-812d-99bf-cb5e1cef1d00" class="">license</h2><ul id="176c3116-ad5e-8135-9e4c-ce65bc35a9c1" class="bulleted-list"><li style="list-style-type:disc">TOEIC - 680 </li></ul><h2 id="176c3116-ad5e-817c-bcb1-e5a4d76a289d" class="">Early project experience</h2><figure id="31d61f3c-afa1-492d-905c-26b92ab3d278" class="link-to-page"><a href="https://www.notion.so/Early-project-experience-31d61f3cafa1492d905c26b92ab3d278?pvs=21">早期專案經驗/ Early project experience</a></figure><h2 id="176c3116-ad5e-81e0-88bc-da4ef65809aa" class="">Side Project</h2><ul id="176c3116-ad5e-8130-8891-eec16829f7f9" class="bulleted-list"><li style="list-style-type:disc"><strong>Apple Redesign</strong><figure id="176c3116-ad5e-8153-b359-d8716fcf330b"><a href="https://apple-redesign-beta.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Apple Redesign</div></div><div class="bookmark-href"><img src="https://apple-redesign-beta.vercel.app/favicon.ico" class="icon bookmark-icon"/>https://apple-redesign-beta.vercel.app/</div></div><img src="https://apple-redesign-beta.vercel.app/_next/image?url=%2Fiphone.png&amp;w=3840&amp;q=75" class="bookmark-image"/></a></figure><p id="176c3116-ad5e-81e4-8b77-f27d2aaae1a1" class="">Technologies Used: Typescript, Redux, Sanity.io, Stripe API, Tailwind CSS</p><p id="176c3116-ad5e-815b-9c8a-f0e824ea28ba" class="">source code: <mark class="highlight-blue"><a href="https://github.com/andygithub9/apple-redesign">https://github.com/andygithub9/apple-redesign</a></mark></p></li></ul><ul id="176c3116-ad5e-814e-8d4c-d1d6bfea8efd" class="bulleted-list"><li style="list-style-type:disc"><strong>Realtime Private Chat</strong><figure id="176c3116-ad5e-813c-a952-c1ac3a1e4e37"><a href="https://realtime-private-chat.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">React App</div><div class="bookmark-description">Web site created using create-react-app</div></div><div class="bookmark-href">https://realtime-private-chat.vercel.app/</div></div></a></figure><p id="176c3116-ad5e-816e-9109-d295bb71cf6d" class="">Technologies Used: React, Firebase</p><p id="176c3116-ad5e-8105-8fa0-f3c9e7f66652" class="">source code: <mark class="highlight-blue"><a href="https://github.com/andygithub9/realtime-private-chat">https://github.com/andygithub9/realtime-private-chat</a></mark></p></li></ul><ul id="176c3116-ad5e-8189-ba6f-c3b136e9da90" class="bulleted-list"><li style="list-style-type:disc"><strong>Netflix Clone</strong><figure id="176c3116-ad5e-81f2-8131-ce7029bd1437"><a href="https://netflix-clone-yt-xi.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">netflix-clone-yt-xi.vercel.app</div></div><div class="bookmark-href"><img src="https://netflix-clone-yt-xi.vercel.app/favicon.ico" class="icon bookmark-icon"/>https://netflix-clone-yt-xi.vercel.app/</div></div></a></figure><p id="176c3116-ad5e-81f6-baad-de9cd2211dc3" class="">Technologies Used: Next.js, React.js, Typescript, Tailwind CSS, Firebase, Vercel</p><p id="176c3116-ad5e-81e4-b1af-cae786590cd7" class="">source code: <mark class="highlight-blue"><a href="https://github.com/andygithub9/netflix-clone-yt">https://github.com/andygithub9/netflix-clone-yt</a></mark></p></li></ul><ul id="176c3116-ad5e-81be-951d-e935100bb90b" class="bulleted-list"><li style="list-style-type:disc"><strong>Notion Clone</strong><figure id="176c3116-ad5e-8140-ac20-fbe5bc6bcfeb"><a href="https://note-taking-app-pi-nine.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Jotion</div><div class="bookmark-description">The connected workspace where better, faster work happens.</div></div><div class="bookmark-href"><img src="https://note-taking-app-pi-nine.vercel.app/logo.svg" class="icon bookmark-icon"/>https://note-taking-app-pi-nine.vercel.app/</div></div></a></figure><p id="176c3116-ad5e-8192-801e-f7c25be453e3" class="">Technologies Used: Next.js, React.js, Typescript, Tailwind CSS, Convex</p><p id="176c3116-ad5e-813f-9b9e-f76bdb6c8bd4" class="">source code: <mark class="highlight-blue"><a href="https://github.com/andygithub90/notion-clone">https://github.com/andygithub90/notion-clone</a></mark></p></li></ul><ul id="176c3116-ad5e-816a-90c2-c4a66eb5f488" class="bulleted-list"><li style="list-style-type:disc"><strong>Trello Clone</strong><figure id="176c3116-ad5e-81a7-b299-de4ecd6ac268"><a href="https://trello-tutorial-zeta.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Taskify</div><div class="bookmark-description">Collaborate, manage projects, and reach new productivity peaks</div></div><div class="bookmark-href"><img src="https://trello-tutorial-zeta.vercel.app/logo.svg" class="icon bookmark-icon"/>https://trello-tutorial-zeta.vercel.app/</div></div></a></figure><p id="176c3116-ad5e-8184-ba1b-fb20d7fd18c5" class="">Technologies Used Next.js 14, Server Actions, React, Prisma, Stripe, Tailwind, MySQL</p><p id="176c3116-ad5e-810e-b273-fab6730ab140" class="">source code: <mark class="highlight-blue"><a href="https://github.com/andygithub9/trello-tutorial">https://github.com/andygithub9/trello-tutorial</a></mark></p></li></ul></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
